@@ -14,6 +14,12 @@ An Obsidian theme that makes notes look typed on aged, premium book paper.
 1. Copy this `Typewriter-Vin` folder into `<your vault>/.obsidian/themes/`.
 2. In Obsidian, go to **Settings → Appearance → Themes** and pick **Typewriter-Vin**.
 
+## License
+
+The theme is released under the MIT License. See `LICENSE`.
+
+The bundled Special Elite font keeps its own license: Apache License 2.0. See `FONT-LICENSE.txt`.
+
 ## Credits
 
 Special Elite by Astigmatic (Brian J. Bonislawsky), under the Apache License 2.0. See `FONT-LICENSE.txt`.
