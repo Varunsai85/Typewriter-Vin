@@ -105,6 +105,17 @@ body {
 
   --code-background: rgba(120, 88, 40, 0.09);
   --code-normal: #3b2e22;
+  /* Syntax colours: fully saturated, bright on the cream paper */
+  --code-comment: #6c5f4d;
+  --code-function: #0070ff;
+  --code-important: #ff2a10;
+  --code-keyword: #b400e6;
+  --code-operator: #e05a00;
+  --code-property: #009690;
+  --code-punctuation: #5a4a3a;
+  --code-string: #1f9e00;
+  --code-tag: #ff1a75;
+  --code-value: #f06a00;
   --blockquote-border-color: rgba(90, 64, 30, 0.45);
   --hr-color: rgba(90, 64, 30, 0.45);
   --tag-color: var(--tw-ribbon-red);
