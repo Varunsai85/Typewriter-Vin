@@ -204,22 +204,23 @@ body {
   background-size: 100% 100%, 2000px 2000px, 400px 400px, 256px 256px;
 }
 
-/* Let the sheet show through Obsidian's own layers */
-.workspace-leaf-content[data-type="markdown"] .view-header,
-.workspace-leaf-content[data-type="markdown"] .view-content,
-.workspace-leaf-content[data-type="markdown"] .markdown-source-view,
-.workspace-leaf-content[data-type="markdown"] .markdown-reading-view,
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-view,
-.workspace-leaf-content[data-type="markdown"] .cm-editor,
-.workspace-leaf-content[data-type="markdown"] .cm-scroller,
-.workspace-leaf-content[data-type="markdown"] .cm-gutters,
-.workspace-leaf-content[data-type="markdown"] .embedded-backlinks,
-.workspace-leaf-content[data-type="markdown"] .metadata-container,
-.workspace-leaf-content[data-type="empty"] .view-header,
-.workspace-leaf-content[data-type="empty"] .view-content,
-.workspace-leaf-content[data-type="bases"] .view-header,
-.workspace-leaf-content[data-type="bases"] .view-content {
-  background-color: transparent !important;
+/* Let the sheet show through Obsidian's own layers.
+   `.workspace .workspace-leaf` outranks Obsidian's own background rules. */
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .view-header,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .view-content,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .markdown-source-view,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .markdown-reading-view,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .markdown-preview-view,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .cm-editor,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .cm-scroller,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .cm-gutters,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .embedded-backlinks,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="markdown"] .metadata-container,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="empty"] .view-header,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="empty"] .view-content,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="bases"] .view-header,
+.workspace .workspace-leaf .workspace-leaf-content[data-type="bases"] .view-content {
+  background-color: transparent;
 }
 
 /* Sidebars & ribbon: darker parchment with a lighter grain */
@@ -313,10 +314,10 @@ body {
 .markdown-rendered i,
 .cm-em {
   font-style: normal;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-  text-decoration-color: var(--text-muted);
+  background-image: linear-gradient(var(--text-muted), var(--text-muted));
+  background-size: 100% 1px;
+  background-position: 0 calc(100% - 0.14em);
+  background-repeat: no-repeat;
 }
 
 .markdown-rendered strong em,
@@ -341,7 +342,6 @@ body {
 .cm-link,
 .cm-url {
   color: var(--text-accent);
-  text-decoration-color: color-mix(in srgb, var(--text-accent) 45%, transparent);
   text-underline-offset: 0.18em;
 }
 
@@ -446,8 +446,8 @@ input[type="checkbox"]:checked {
 .markdown-rendered pre code,
 .markdown-source-view.mod-cm6 .HyperMD-codeblock,
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
-  border: none !important;
-  box-shadow: none !important;
+  border: none;
+  box-shadow: none;
   text-shadow: none;
 }
 
